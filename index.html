@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection GUI</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/app.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Object Detection</h1>
+        <div class="buttons">
+            <button id="imageButton">Upload Image</button>
+            <button id="videoButton">Upload Video</button>
+            <input type="file" id="imageUpload" accept="image/*" style="display:none;">
+            <input type="file" id="videoUpload" accept="video/*" style="display:none;">
+        </div>
+        <div class="result-container">
+            <div class="image-container">
+                <h2>Uploaded Image</h2>
+                <img id="uploadedImage" src="" alt="Uploaded Image">
+            </div>
+            <div class="image-container">
+                <h2>Detected Image</h2>
+                <canvas id="detectedImage"></canvas>
+            </div>
+        </div>
+        <div class="chart-container">
+            <h2>Detection Results</h2>
+            <canvas id="resultsChart"></canvas>
+        </div>
+    </div>
+</body>
+</html>
